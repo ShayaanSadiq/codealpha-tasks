@@ -4,11 +4,10 @@ Welcome to my CodeAlpha Web Development Internship repository! This repository c
 
 ## Table of Contents
 
-1. [Try the Projects](#try-the-projects)
-2. [Project 01 - E-commerce Website](#project-01---e-commerce-website)
-3. [Project 02 - Mini Social Media App](#project-02---mini-social-media-app)
-4. [Technologies Used](#technologies-used)
-5. [License](#license)
+1. [Project 01 - E-commerce Website](#project-01---e-commerce-website)
+2. [Project 02 - Mini Social Media App](#project-02---mini-social-media-app)
+3. [Technologies Used](#technologies-used)
+4. [License](#license)
 
 ## Project 01 - E-commerce Website
 
