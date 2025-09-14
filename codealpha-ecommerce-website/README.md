@@ -6,27 +6,27 @@ Welcome to my website, a lightweight, fast, and responsive full-stack e-commerce
 
 ### - Home Page
 
-<img width="1919" height="869" alt="image" src="https://github.com/user-attachments/assets/e71d6590-0527-4120-98ed-36d91c5f4e0f" />
+<img width="1919" height="869" alt="Screenshot 2025-09-13 031534" src="https://github.com/user-attachments/assets/73c0969e-f339-4dc1-b975-edc1217f5ead" />
 
 ### - Product Details
 
-<img width="1919" height="866" alt="image" src="https://github.com/user-attachments/assets/4876309d-f9de-46e9-bba5-5829b46243bc" />
+<img width="1919" height="866" alt="Screenshot 2025-09-13 031545" src="https://github.com/user-attachments/assets/5f054550-ea62-4c52-82ba-7710f74d9645" />
 
 ### - Cart
 
-<img width="1918" height="868" alt="image" src="https://github.com/user-attachments/assets/04c6002a-f506-4d2e-a400-d3177ed3d7e3" />
+<img width="1918" height="868" alt="Screenshot 2025-09-13 031601" src="https://github.com/user-attachments/assets/db20579f-75ff-4fce-9063-b3d74e3f181d" />
 
 ### - Order processing
 
-<img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/eb3f9f35-5904-45a8-8d72-c47123964e1a" />
+<img width="1919" height="867" alt="Screenshot 2025-09-13 031613" src="https://github.com/user-attachments/assets/13b42e78-bb77-4441-a31d-51954f305608" />
 
 ### - Order confirmation
 
-<img width="551" height="173" alt="image" src="https://github.com/user-attachments/assets/c5b51182-1e05-4451-83b3-23edc0ce8ad7" />
+<img width="551" height="173" alt="Screenshot 2025-09-13 031630" src="https://github.com/user-attachments/assets/8404e119-a5dd-4065-bb4b-a379ef027280" />
 
 ### - Login/Register
 
-<img width="1919" height="866" alt="image" src="https://github.com/user-attachments/assets/b9ee2ce2-95f2-407d-bd63-c53a5ccc650d" />
+<img width="1919" height="866" alt="Screenshot 2025-09-13 031643" src="https://github.com/user-attachments/assets/1b3e7b3c-871d-453f-a14f-18532c1b2716" />
 
 ## Table of Contents
 
