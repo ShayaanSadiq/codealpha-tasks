@@ -9,15 +9,15 @@ Welcome to my CodeAlpha Web Development Internship repository! This repository c
 3. [Technologies Used](#technologies-used)
 4. [License](#license)
 
-## Project 01 - E-commerce Website
+## Task 1 - E-commerce Website
 
 The E-commerce Website is a full-featured online shopping platform that allows users to browse products, add them to the cart, and make purchases. It includes user authentication, product management, and order tracking. The project is designed to provide a seamless shopping experience with a responsive and user-friendly interface.
 
 - [Project 01 Documentation](./codealpha-ecommerce-website/README.md)
 
-## Project 02 - Mini Social Media App
+## Task 2 - Mini Social Media App
 
-The Mini Social Media App is a lightweight social platform where users can register, log in, create posts, like and comment on posts, and connect with other users. This project focuses on core social media functionalities with an emphasis on real-time interactions and responsive design.
+The Mini Social Media App is a lightweight social platform where users can register, log in, create posts, like and comment on posts, and connect with other users. This project focuses on core social media functionalities with a responsive design.
 
 - [Project 02 Documentation](./codealpha-social-media-app/README.md)
 
