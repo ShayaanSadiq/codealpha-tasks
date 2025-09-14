@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Product</title><link rel="stylesheet" href="assets/main.css"></head><body>
+<div class="header"><div class="container"><a href="index.html">Home</a> | <a href="cart.html">Cart</a></div></div>
+<div class="container">
+  <div id="product" class="card"></div>
+</div>
+<script src="assets/main.js"></script>
+<script>
+  const params = new URLSearchParams(location.search);
+  const id = params.get('id');
+  async function load(){
+    const res = await fetch(API_BASE + '/products/' + id);
+    if(!res.ok) { document.getElementById('product').innerText='Product not found'; return; }
+    const p = await res.json();
+    document.getElementById('product').innerHTML = `
+      <img src="${p.image}" style="width:300px;height:240px;object-fit:cover;border-radius:6px">
+      <h2>${p.title}</h2>
+      <p>${p.description}</p>
+      <p>₹${p.price}</p>
+      <button onclick="addToCart('${p._id}','${p.title}',${p.price})">Add to cart</button>
+    `;
+  }
+  load();
+  function addToCart(id,title,price){
+    let cart = JSON.parse(localStorage.getItem('cart')||'[]');
+    const item = cart.find(i=>i.productId===id);
+    if(item) item.quantity++;
+    else cart.push({ productId:id, title, price, quantity:1 });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Added to cart');
+  }
+</script>
+</body></html>

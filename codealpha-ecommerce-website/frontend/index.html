@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Shop - Products</title>
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="login.html" id="auth-link">Login</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Products</h1>
+    <div id="products" class="grid"></div>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    async function load() {
+      const res = await fetch(API_BASE + '/products');
+      const products = await res.json();
+      const container = document.getElementById('products');
+      container.innerHTML = products.map(p =>
+        `<div class="card">
+           <img src="${p.image}" alt="${p.title}" style="width:100%;height:140px;object-fit:cover;border-radius:6px"/>
+           <h3>${p.title}</h3>
+           <p class="small">${p.description}</p>
+           <p>₹${p.price}</p>
+           <button onclick="view('${p._id}')">View</button>
+           <button onclick="addToCart('${p._id}','${p.title}',${p.price})">Add to cart</button>
+         </div>`
+      ).join('');
+      updateCartCount();
+    }
+
+    function view(id){ window.location = 'product.html?id=' + id }
+
+    function addToCart(id, title, price){
+      let cart = JSON.parse(localStorage.getItem('cart')||'[]');
+      const item = cart.find(i=>i.productId===id);
+      if(item) item.quantity++;
+      else cart.push({ productId:id, title, price, quantity:1 });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert('Added to cart');
+    }
+
+    function updateCartCount(){
+      const cart = JSON.parse(localStorage.getItem('cart')||'[]');
+      document.getElementById('cart-count').innerText = cart.reduce((s,i)=>s+i.quantity,0);
+    }
+
+    load();
+  </script>
+</body>
+</html>

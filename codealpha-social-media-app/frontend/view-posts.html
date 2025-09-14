@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+  <span>Social Media App</span>
+  <div>
+    <a href="create-post.html">Create Post</a>
+    <button onclick="logout()">Logout</button>
+  </div>
+</div>
+<div class="container">
+  <h2>Posts</h2>
+  <div id="posts"></div>
+</div>
+
+<script src="script.js"></script>
+<script>
+checkAuth();
+fetchPosts();
+</script>
+</body>
+</html>

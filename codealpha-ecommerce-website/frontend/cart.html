@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Cart</title><link rel="stylesheet" href="assets/main.css"></head><body>
+<div class="header"><div class="container"><a href="index.html">Home</a></div></div>
+<div class="container">
+  <h1>Your Cart</h1>
+  <div id="cart"></div>
+  <div style="margin-top:12px">
+    <button id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</div>
+<script src="assets/main.js"></script>
+<script>
+  function render(){
+    const cart = JSON.parse(localStorage.getItem('cart')||'[]');
+    if(cart.length===0){ document.getElementById('cart').innerHTML = '<p>Cart empty</p>'; return; }
+    const html = cart.map((i,idx)=>`
+      <div class="card">
+        <strong>${i.title}</strong>
+        <p>₹${i.price} × ${i.quantity}</p>
+        <button onclick="changeQty(${idx},1)">+</button>
+        <button onclick="changeQty(${idx},-1)">-</button>
+        <button onclick="remove(${idx})">Remove</button>
+      </div>
+    `).join('');
+    const total = cart.reduce((s,i)=>s + i.price*i.quantity, 0);
+    document.getElementById('cart').innerHTML = html + `<h3>Total: ₹${total}</h3>`;
+  }
+  function changeQty(idx, delta){
+    const cart = JSON.parse(localStorage.getItem('cart')||'[]');
+    cart[idx].quantity += delta;
+    if(cart[idx].quantity <= 0) cart.splice(idx,1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    render();
+  }
+  function remove(idx){
+    const cart = JSON.parse(localStorage.getItem('cart')||'[]'); cart.splice(idx,1);
+    localStorage.setItem('cart', JSON.stringify(cart)); render();
+  }
+
+  document.getElementById('checkoutBtn').addEventListener('click', ()=>{
+    const token = localStorage.getItem('token');
+    if(!token) {
+      alert('Please login to checkout');
+      window.location = 'login.html';
+      return;
+    }
+    window.location = 'checkout.html';
+  });
+
+  render();
+</script>
+</body></html>

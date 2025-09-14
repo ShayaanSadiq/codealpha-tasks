@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Login</title><link rel="stylesheet" href="assets/main.css"></head><body>
+<div class="header"><div class="container"> <a href="index.html">Home</a></div></div>
+<div class="container">
+  <h2>Login</h2>
+  <form id="form">
+    <div><input id="email" placeholder="Email" required></div>
+    <div><input id="password" type="password" placeholder="Password" required></div>
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have account? <a href="register.html">Register</a></p>
+</div>
+<script src="assets/main.js"></script>
+<script>
+  document.getElementById('form').onsubmit = async (e)=>{
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const res = await fetch(API_BASE + '/auth/login', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ email, password })
+    });
+    const data = await res.json();
+    if(res.ok){
+      localStorage.setItem('token', data.token);
+      alert('Logged in');
+      window.location = 'index.html';
+    } else {
+      alert(data.message || 'Login failed');
+    }
+  }
+</script>
+</body></html>
