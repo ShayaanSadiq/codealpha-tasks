@@ -6,19 +6,19 @@ Welcome to my Mini Social Media Platform, a lightweight, fast, and responsive fu
 
 ### - Login Page
 
-<img width="1919" height="870" alt="image" src="https://github.com/user-attachments/assets/07a5ec99-67fa-4bca-8b33-a7f3bfda423b" />
+<img width="1919" height="870" alt="Screenshot 2025-09-15 033938" src="https://github.com/user-attachments/assets/705da95e-260b-4ec8-b33a-e282434a037a" />   
 
 ### - Register Page
 
-<img width="1919" height="869" alt="image" src="https://github.com/user-attachments/assets/2e100a19-7bc5-4678-aff5-9b283ebc96b6" />
+<img width="1919" height="869" alt="Screenshot 2025-09-15 034111" src="https://github.com/user-attachments/assets/b11b676d-7b1c-49f1-91b8-7fd5850f258a" />
 
 ### - Create Post
 
-<img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/7b333482-7ac3-4821-a47c-1c174c7a7d27" />
+<img width="1919" height="868" alt="Screenshot 2025-09-15 034046" src="https://github.com/user-attachments/assets/0bd56b7e-eb16-47df-9c99-98b761bdfe2d" />
 
 ### - View Posts / Feed
 
-<img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/a7426038-16d4-486d-8d39-2fcb2d557b03" />
+<img width="1919" height="868" alt="Screenshot 2025-09-15 034026" src="https://github.com/user-attachments/assets/27b7d67d-aac2-4c22-a085-6b0e98c577a3" />
 
 ## Table of Contents
 
